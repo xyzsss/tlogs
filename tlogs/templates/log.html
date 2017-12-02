@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}LOG{% endblock %}
+
+{% block banner %}
+	<div class="banner row">
+		<span class="three columns"><a href="{{ url_for('index') }}"> <img src="{{ url_for('static', filename='images/logo.png') }}"> </a></span>
+		<span class="three columns mmmcenter"><a href="{{ url_for('logs_show') }}"><img src="{{ url_for('static', filename='images/allow_forward.png') }}"></a></span>
+	</div>
+{% endblock %}
+{% block content %}
+	<div class="container mmcenter">
+		<form action="{{url_for('log_entry_add')}}" method=post class=add-entry>
+		  <dl>
+			<dt>CONTEXT:
+			<dd><input  type=text size=69 name=context>
+			<dt>EXTRA:
+			<dd><textarea name=extra height=100px cols=66></textarea>
+			<dd><input type='submit' class='button-primary' value='LOG IT'>
+		  </dl>
+		</form> 
+	</div>
+{% endblock %}

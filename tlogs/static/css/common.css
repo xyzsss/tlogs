@@ -1,0 +1,22 @@
+body {
+    background: #eaeff2;
+    /*background-image: url("static/images/bg.png") 0 0 repeat;*/
+}
+
+
+.center {
+    padding-top:20%;
+}
+.mcenter {
+    padding-top:15%;
+}
+.mmcenter {
+    padding-top:10%;
+}
+.mmmcenter{
+    padding-top:4%;
+}
+.banner {
+    margin-top:1%;
+    margin-left:15%;
+}

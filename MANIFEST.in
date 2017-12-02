@@ -1,0 +1,3 @@
+graft tlogs/templates
+graft tlogs/static
+include tlogs/schema.sql

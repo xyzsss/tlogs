@@ -3,8 +3,8 @@
 
 {% block banner %}
 	<div class="banner row">
-		<span class="three columns"><a href="{{ url_for('index') }}"> <img src="{{ url_for('static', filename='images/logo.png') }}"> </a></span>
-		<span class="three columns mmmcenter"><a href="{{ url_for('logs_show') }}"><img src="{{ url_for('static', filename='images/allow_forward.png') }}"></a></span>
+		<span class="col-xs-6"><a href="{{ url_for('index') }}"> <img src="{{ url_for('static', filename='images/logo.png') }}"> </a></span>
+		<span class="col-xs-3 mmmcenter"><a href="{{ url_for('logs_show') }}"><img src="{{ url_for('static', filename='images/allow_forward.png') }}"></a></span>
 	</div>
 {% endblock %}
 {% block content %}
@@ -12,10 +12,11 @@
 		<form action="{{url_for('log_entry_add')}}" method=post class=add-entry>
 		  <dl>
 			<dt>CONTEXT:
-			<dd><input  type=text size=69 name=context>
+			<dd><input  type=text size=69 class='form-control' name=context>
 			<dt>EXTRA:
-			<dd><textarea name=extra height=100px cols=66></textarea>
-			<dd><input type='submit' class='button-primary' value='LOG IT'>
+			<dd><textarea name=extra class='form-control' rows=3></textarea>
+			<br/>
+			<dd><input type='submit' class='btn-info' value='LOG IT'>
 		  </dl>
 		</form> 
 	</div>

@@ -2,8 +2,8 @@
 {% block title %}LOG{% endblock %}
 {% block banner %}
     <div class="banner row">
-        <span class="three columns"><a href="{{ url_for('index') }}"> <img src="{{ url_for('static', filename='images/logo.png') }}"> </a></span>
-        <span class="three columns mmmcenter"><a href="{{ url_for('log_add') }}"><img src="{{ url_for('static', filename='images/allow_forward.png') }}"></a></span>
+        <span class="col-xs-6"><a href="{{ url_for('index') }}"> <img src="{{ url_for('static', filename='images/logo.png') }}"> </a></span>
+        <span class="col-xs-3 mmmcenter"><a href="{{ url_for('log_add') }}"><img src="{{ url_for('static', filename='images/allow_forward.png') }}"></a></span>
     </div>
 {% endblock %}
 {% block content %}
@@ -11,7 +11,7 @@
 
      <ul class='list'>
       {% for entry in entries %}
-        <li>{{ entry.context }} &nbsp;&nbsp;||&nbsp;&nbsp; {{ entry.extra }} &nbsp;|&nbsp; {{ getype(entry.time) }}</li>
+        <li>{{ entry.context }} &nbsp;&nbsp;||&nbsp;&nbsp; {{ entry.extra }} &nbsp;|&nbsp; <span class='tiny-font'> {{ getype(entry.time) }}</span></li>
       {% else %}
         <li><em>No logs.</em>
       {% endfor %}
